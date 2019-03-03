@@ -1,3 +1,9 @@
 <% provide(:title, "Top") %>
 
 トップページだよ〜
+
+<%= form_for @product, url: {controller: :export, action: :create} do |f| %>
+    <%= f.label "PDFを入れてね！！" %>
+    <%= f.file_field :pdf %>
+    <%= f.submit "あなたのPDFすっご〜い" %>
+<% end %>
